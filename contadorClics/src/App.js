@@ -8,6 +8,8 @@ import { useState } from 'react';//useState es un hook en React que permite a lo
 function App() {
   const [numClics, setNumClics] = useState(0);//0 es el valor inicial de número de clics
 
+  console.log("excusa");
+
   const manejarClic = () => {
     setNumClics(numClics + 1);
   }
