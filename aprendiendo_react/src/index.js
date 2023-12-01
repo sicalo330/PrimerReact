@@ -2,17 +2,21 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import Usuario from './componentes/Usuario';
 import { FormularioInicioSesion } from './componentes/formularioInicioSesion';
+import Contador from './componentes/ClaseContador'
+import ContadorFuncional from './componentes/FuncionalContador';
 
 const App = () =>{
-  const [sesion, cambiarEstadoSesion] = useState(false);//El useState puede cambiar de estado a seison o cambiarEstadoSesion
+  const [sesion, cambiarEstadoSesion] = useState(true);//El useState puede cambiar de estado a seison o cambiarEstadoSesion
   //React cargará el componente siempre que el estado cambie
   return(
   <>
     {sesion === true?
     <>
       <Usuario />
+      {/*<Contador cantidadAIncrementar = {10} cantidadADisminuir = {3} /> <ContadorFuncional cantidadAIncrementar = {10} cantidadADisminuir = {3} />*/ }
+      <Contador cantidadAIncrementar = {10} cantidadADisminuir = {3} />
       <FormularioInicioSesion />
-      {/*<button onClick={() => cambiarEstadoSesion(false)}>Cerrar sesion</button>*/}
+      <button onClick={() => cambiarEstadoSesion(false)}>Cerrar sesion</button>
     </>
     :
     <>
