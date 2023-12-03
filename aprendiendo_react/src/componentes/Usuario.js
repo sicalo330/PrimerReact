@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components'
 
 const Usuario = () =>{
   const nombre = ' carlos';
@@ -9,13 +10,22 @@ const Usuario = () =>{
       <div>
           <h1 className='titulo'style={{color:color}}>Hola mundo{nombre}</h1>
             {pais && <p>Que tengas buen día, tu eres de {pais}</p>}
-            <p>Tu lista de amigos es:</p>
+            < Parrafo>Esta es tu lista de amigos</Parrafo>
           <ul>
-            {amigos.map((amigo, naranjas) =>  <li key={naranjas}>{amigo}</li>)}
+            {amigos.map((amigo, naranjas) =>  <Lista key={naranjas}>{amigo}</Lista>)}
           </ul>
-          <p>Que tengas un buen día</p>
+          <Parrafo>Que tengas un buen día</Parrafo>
       </div>
     );
   }
+
+const Parrafo = styled.p`
+  margin: 20px 0;
+`;
+
+const Lista = styled.li`
+  list-style:none;
+  line-height:30px;
+`;
 
 export default Usuario;

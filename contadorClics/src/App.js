@@ -5,6 +5,7 @@ import Boton from './componentes/Boton';
 import Contador from './componentes/Contador'
 import { useState } from 'react';//useState es un hook en React que permite a los componentes de función mantener y actualizar su estado interno. Con useState, puedes agregar estado a un componente de función sin tener que convertirlo en un componente de clase.
 
+
 function App() {
   const [numClics, setNumClics] = useState(0);//0 es el valor inicial de número de clics
 
