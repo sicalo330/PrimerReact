@@ -20,7 +20,8 @@ const FormularioTreas = ({tareas, cambiarTareas}) => {
                 texto:inputTarea,
                 completada:false
             }
-        ]);//Al parecer
+        ]);
+        cambiarInputTarea('')
     }
     return(
         <form action="" className="formulario-tareas" onSubmit={handleSubmit}>
