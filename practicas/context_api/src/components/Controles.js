@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { ContextoTema } from "../contextos/contextoTema";
 
 const Controles = () => {
+    //Estamos estrayendo las funciones de ContextoTema por lo tanto es importante escribir bien el nombre de las funciones
     const {
          aumentarFuente,
          disminuirFuente,
