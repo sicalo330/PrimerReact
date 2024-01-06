@@ -11,6 +11,7 @@ import IniciarSesion from './componentes/IniciarSesion';
 import ListaDeGastos from './componentes/ListaDeGastos';
 import RegistrarUsuarios from './componentes/RegistrarUsuarios';
 import Fondo from './elementos/Fondo';
+import { AuthProvider } from './contextos/AuthContext';
 
 WebFont.load({
   google: {
@@ -21,18 +22,20 @@ WebFont.load({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Contenedor>
-        <Routes>
-          <Route path='/iniciarSesion' element={<IniciarSesion />}/>
-          <Route path='/registrarUsuarios' element={<RegistrarUsuarios />}/>
-          <Route path='/listaGastos' element={<ListaDeGastos />}/>
-          <Route path='/editarGastos' element={<EditarGastos />}/>
-          <Route path='/gastosPorCategoria' element={<GastosPorCategoria />}/>
-          <Route path='/' element={ <App />}/>
-        </Routes>
-      </Contenedor>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Contenedor>
+          <Routes>
+            <Route path='/iniciarSesion' element={<IniciarSesion />}/>
+            <Route path='/registrarUsuarios' element={<RegistrarUsuarios />}/>
+            <Route path='/listaGastos' element={<ListaDeGastos />}/>
+            <Route path='/editarGastos' element={<EditarGastos />}/>
+            <Route path='/gastosPorCategoria' element={<GastosPorCategoria />}/>
+            <Route path='/' element={ <App />}/>
+          </Routes>
+        </Contenedor>
+      </BrowserRouter>
+    </AuthProvider>
     <Fondo />
   </React.StrictMode>
 );
