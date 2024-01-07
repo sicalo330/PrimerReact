@@ -2,6 +2,7 @@ import React from "react";
 import {Header,Titulo,ContenedorHeader,ContenedorBotones} from './elementos/Header.js'
 import Boton from "./elementos/Boton.js";
 import BotonCerrarSesion from "./componentes/BotonCerrarSesion.js";
+import FormularioGastos from "./componentes/FormularioGastos.js";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           </ContenedorBotones>
         </ContenedorHeader>
       </Header>
+      <FormularioGastos />
     </>
    );
 }

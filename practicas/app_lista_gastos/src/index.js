@@ -12,6 +12,7 @@ import ListaDeGastos from './componentes/ListaDeGastos';
 import RegistrarUsuarios from './componentes/RegistrarUsuarios';
 import Fondo from './elementos/Fondo';
 import { AuthProvider } from './contextos/AuthContext';
+import RutaPrivada from './componentes/RutaPrivada';
 
 WebFont.load({
   google: {
@@ -28,10 +29,32 @@ root.render(
           <Routes>
             <Route path='/iniciarSesion' element={<IniciarSesion />}/>
             <Route path='/registrarUsuarios' element={<RegistrarUsuarios />}/>
-            <Route path='/listaGastos' element={<ListaDeGastos />}/>
-            <Route path='/editarGastos' element={<EditarGastos />}/>
-            <Route path='/gastosPorCategoria' element={<GastosPorCategoria />}/>
-            <Route path='/' element={ <App />}/>
+
+            <Route path='gastosPorCategoria' element={
+              <RutaPrivada>
+                <GastosPorCategoria />
+              </RutaPrivada>
+            } />
+
+            <Route path='listaGastos' element={
+              <RutaPrivada>
+                <ListaDeGastos />
+              </RutaPrivada>
+            }/>
+
+            <Route path='editarGastos' element={
+              <RutaPrivada>
+                <EditarGastos />
+              </RutaPrivada>
+            }/>
+
+            <Route path='/' element={
+              <RutaPrivada>
+                  <App />
+              </RutaPrivada>
+            } />
+
+
           </Routes>
         </Contenedor>
       </BrowserRouter>
