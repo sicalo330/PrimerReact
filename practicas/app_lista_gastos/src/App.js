@@ -3,6 +3,7 @@ import {Header,Titulo,ContenedorHeader,ContenedorBotones} from './elementos/Head
 import Boton from "./elementos/Boton.js";
 import BotonCerrarSesion from "./componentes/BotonCerrarSesion.js";
 import FormularioGastos from "./componentes/FormularioGastos.js";
+import BarraTotalGastado from "./componentes/BarraTotalGastado.js";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         </ContenedorHeader>
       </Header>
       <FormularioGastos />
+      <BarraTotalGastado />
     </>
    );
 }

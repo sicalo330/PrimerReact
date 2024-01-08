@@ -64,13 +64,13 @@ const SelectCategorias = ({categoria, cambiarCategoria}) => {
 
     const categorias = [
         {id: 'comida', texto: 'Comida'},
-        {id: 'cuentasPagos', texto: 'Cuentas y pagos'},
-        {id: 'casa', texto: 'Casa'},
+        {id: 'cuentas y pagos', texto: 'Cuentas y pagos'},
+        {id:'casa', texto:'Casa'},
         {id: 'transporte', texto: 'Transporte'},
         {id: 'ropa', texto: 'Ropa'},
-        {id: 'saludHigiene', texto: 'Salud e Higiene'},
+        {id: 'salud e higiene', texto: 'Salud e Higiene'},
         {id: 'compras', texto: 'Compras'},
-        {id: 'personal', texto: 'Personal'}
+        {id: 'diversion', texto: 'Personal'}
     ]
 
     const handleClick = (e) => {

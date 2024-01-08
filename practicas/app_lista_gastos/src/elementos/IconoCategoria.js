@@ -8,21 +8,21 @@ import {ReactComponent as IconoRopa} from './../imagenes/ropa.svg'
 import {ReactComponent as IconoSalud} from './../imagenes/salud.svg'
 import {ReactComponent as IconoTransporte} from './../imagenes/transporte.svg'
 
-const IconoCategoria = ({nombre}) => {
-    switch(nombre){
+const IconoCategoria = ({id}) => {
+    switch(id){
         case 'comida':
             return <IconoComida />
         case 'compras':
             return <IconoCompras />
-        case 'cuentasPagos':
+        case 'cuentas y pagos':
             return <IconoPagos />
-        case 'personal':
+        case 'diversion':
             return <IconoPersonal />
         case 'casa':
             return <IconoCasa />
         case 'ropa':
             return <IconoRopa />
-        case 'saludHigiene':
+        case 'salud e higiene':
             return <IconoSalud />
         case 'transporte':
             return <IconoTransporte />

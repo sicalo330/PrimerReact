@@ -13,6 +13,7 @@ import RegistrarUsuarios from './componentes/RegistrarUsuarios';
 import Fondo from './elementos/Fondo';
 import { AuthProvider } from './contextos/AuthContext';
 import RutaPrivada from './componentes/RutaPrivada';
+import { TotalGastadoProvider } from './contextos/TotalGastadoContextMes';
 
 WebFont.load({
   google: {
@@ -24,40 +25,42 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthProvider>
-      <BrowserRouter>
-        <Contenedor>
-          <Routes>
-            <Route path='/iniciarSesion' element={<IniciarSesion />}/>
-            <Route path='/registrarUsuarios' element={<RegistrarUsuarios />}/>
+      <TotalGastadoProvider>
+        <BrowserRouter>
+          <Contenedor>
+            <Routes>
+              <Route path='/iniciarSesion' element={<IniciarSesion />}/>
+              <Route path='/registrarUsuarios' element={<RegistrarUsuarios />}/>
 
-            <Route path='gastosPorCategoria' element={
-              <RutaPrivada>
-                <GastosPorCategoria />
-              </RutaPrivada>
-            } />
+              <Route path='gastosPorCategoria' element={
+                <RutaPrivada>
+                  <GastosPorCategoria />
+                </RutaPrivada>
+              } />
 
-            <Route path='listaGastos' element={
-              <RutaPrivada>
-                <ListaDeGastos />
-              </RutaPrivada>
-            }/>
+              <Route path='listaGastos' element={
+                <RutaPrivada>
+                  <ListaDeGastos />
+                </RutaPrivada>
+              }/>
 
-            <Route path='editarGastos' element={
-              <RutaPrivada>
-                <EditarGastos />
-              </RutaPrivada>
-            }/>
+              <Route path='editarGastos/:id' element={
+                <RutaPrivada>
+                  <EditarGastos />
+                </RutaPrivada>
+              }/>
 
-            <Route path='/' element={
-              <RutaPrivada>
-                  <App />
-              </RutaPrivada>
-            } />
+              <Route path='/' element={
+                <RutaPrivada>
+                    <App />
+                </RutaPrivada>
+              } />
 
 
-          </Routes>
-        </Contenedor>
-      </BrowserRouter>
+            </Routes>
+          </Contenedor>
+        </BrowserRouter>
+      </TotalGastadoProvider>
     </AuthProvider>
     <Fondo />
   </React.StrictMode>
